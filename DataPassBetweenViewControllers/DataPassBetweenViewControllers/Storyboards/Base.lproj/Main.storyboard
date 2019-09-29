@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="-61" y="114"/>
         </scene>
-        <!--InputViewController-->
+        <!--InputView-->
         <scene sceneID="Hrn-3X-v1o">
             <objects>
-                <viewControllerPlaceholder storyboardName="InputViewController" referencedIdentifier="InputViewController" id="tno-dw-oaJ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="InputViewController" referencedIdentifier="InputView" id="tno-dw-oaJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sce-ji-otg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="602" y="26"/>

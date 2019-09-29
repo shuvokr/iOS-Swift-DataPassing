@@ -9,7 +9,11 @@
 import UIKit
 
 class DisplayViewController: UIViewController {
-
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var mobileNo: UILabel!
+    @IBOutlet weak var email: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

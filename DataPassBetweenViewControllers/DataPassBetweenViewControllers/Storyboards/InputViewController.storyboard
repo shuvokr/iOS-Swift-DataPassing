@@ -13,7 +13,7 @@
         <!--Input View Controller-->
         <scene sceneID="KDB-6k-06q">
             <objects>
-                <viewController storyboardIdentifier="InputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kuZ-kl-KJF" customClass="InputViewController" customModule="DataPassBetweenViewControllers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kuZ-kl-KJF" customClass="InputViewController" customModule="DataPassBetweenViewControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FI8-XZ-RaB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="inputToDisplay:" destination="kuZ-kl-KJF" eventType="touchUpInside" id="HIv-m1-Khk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,10 +132,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hbc-8J-aFg"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="UHU-9T-Ych" id="dOd-d8-1fQ"/>
+                        <outlet property="mobileNoField" destination="5IV-EY-gS5" id="3V4-yc-5Z3"/>
+                        <outlet property="nameField" destination="INR-ry-WEb" id="969-5w-dXf"/>
+                        <segue destination="7qf-5p-VXx" kind="show" identifier="InputToDisplay" id="yVL-TU-FfJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vl6-rh-jWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="-33.482142857142854"/>
+            <point key="canvasLocation" x="-394" y="-214"/>
+        </scene>
+        <!--DisplayView-->
+        <scene sceneID="rLg-1q-G9r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DisplayViewController" referencedIdentifier="DisplayView" id="7qf-5p-VXx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="447-2h-nrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="-265"/>
         </scene>
     </scenes>
 </document>
