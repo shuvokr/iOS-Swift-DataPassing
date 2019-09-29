@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol DisplayViewControllerDelegate : NSObjectProtocol {
+    func dataPassConfarmation(massage : String)
+}
+
 class DisplayViewController: UIViewController {
+    
+    weak var displayDelegate : DisplayViewControllerDelegate?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var mobileNo: UILabel!
@@ -18,9 +24,19 @@ class DisplayViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dataPassConfarmationMassage()
     }
     
-
+    @IBAction func backTo(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func dataPassConfarmationMassage() {
+        if let delegate = displayDelegate {
+            delegate.dataPassConfarmation(massage: "Successfully get the massage ???")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

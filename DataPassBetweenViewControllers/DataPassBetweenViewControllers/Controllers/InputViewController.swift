@@ -8,7 +8,11 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController, DisplayViewControllerDelegate {
+    func dataPassConfarmation(massage: String) {
+        print(massage)
+    }
+    
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var mobileNoField: UITextField!
@@ -30,6 +34,7 @@ class InputViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if(segue.identifier == "InputToDisplay") {
             let disPlayVC = segue.destination as! DisplayViewController
+            disPlayVC.displayDelegate = self
             DispatchQueue.main.async {
                 disPlayVC.name.text = self.nameField.text
                 disPlayVC.mobileNo.text = self.mobileNoField.text
