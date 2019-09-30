@@ -32,8 +32,18 @@ class DisplayViewController: UIViewController {
     }
     
     func dataPassConfarmationMassage() {
-        if let delegate = displayDelegate {
-            delegate.dataPassConfarmation(massage: "Successfully get the massage ???")
+        DispatchQueue.main.async {
+            if let delegate = self.displayDelegate {
+                if(self.name.text!.count > 0) {
+                    delegate.dataPassConfarmation(massage: "Successfully get the massage !")
+                    delegate.dataPassConfarmation(massage: "Name : \(self.name.text!)")
+                    delegate.dataPassConfarmation(massage: "Name : \(self.mobileNo.text!)")
+                    delegate.dataPassConfarmation(massage: "Name : \(self.email.text!)")
+                }
+                else {
+                    delegate.dataPassConfarmation(massage: "Not Successfully get the massage .")
+                }
+            }
         }
     }
     
